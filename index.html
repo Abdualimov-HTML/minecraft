@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft 3D Survival</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="game">
+        <div id="top-info">
+            <span>⛏ MINECRAFT 3D SURVIVAL</span>
+            <span id="time">☀️ День</span>
+        </div>
+
+        <div id="crosshair">+</div>
+
+        <div id="instructions">
+            <h2>MINECRAFT 3D</h2>
+            <p>Новый большой мир ждёт тебя!</p>
+            <p>WASD — ходить | SPACE — прыгать</p>
+            <p>ЛКМ — копать | ПКМ — ставить</p>
+            <p>1–6 — выбирать блок</p>
+            <p>E — спать возле кровати</p>
+            <button id="startButton">ИГРАТЬ</button>
+        </div>
+
+        <div id="hotbar"></div>
+
+        <div id="help">
+            WASD — ходить | SPACE — прыгать | ЛКМ — копать
+        </div>
+
+        <div id="message"></div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

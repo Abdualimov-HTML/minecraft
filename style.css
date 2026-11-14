@@ -1,0 +1,162 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: #87ceeb;
+    color: white;
+}
+
+#game {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+#top-info {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px black;
+    pointer-events: none;
+}
+
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+    pointer-events: none;
+}
+
+#instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 370px;
+    max-width: 90%;
+    padding: 30px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.88);
+    border: 3px solid #aaa;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+#instructions h2 {
+    margin-bottom: 20px;
+    color: #70d85b;
+    font-size: 28px;
+}
+
+#instructions p {
+    margin: 12px 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+#startButton {
+    margin-top: 20px;
+    padding: 13px 35px;
+    border: 2px solid white;
+    background: #4c9b36;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background: #65c445;
+}
+
+#hotbar {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.65);
+    border: 2px solid #aaa;
+}
+
+.slot {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #777;
+    background: rgba(100, 100, 100, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.slot.selected {
+    border: 3px solid white;
+    background: rgba(180, 180, 180, 0.5);
+    transform: scale(1.12);
+}
+
+#help {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+#message {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px black;
+    pointer-events: none;
+}
+
+@media (max-width: 500px) {
+    .slot {
+        width: 38px;
+        height: 38px;
+        font-size: 21px;
+    }
+
+    #hotbar {
+        bottom: 40px;
+        gap: 2px;
+    }
+
+    #help {
+        font-size: 10px;
+    }
+}
